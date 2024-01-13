@@ -1,0 +1,31 @@
+.main-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 10px;
+}
+
+.ma-container {
+  display: flex;
+  align-items: flex-end;
+  height: 40px;
+  margin: 10px;
+}
+
+.shift-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+  padding: 10px;
+  cursor: pointer;
+  &:hover {
+    background-color: gray;
+  }
+}
+.not-booked {
+  background-color: white;
+}
+.booked {
+  background-color: lightgray;
+}
