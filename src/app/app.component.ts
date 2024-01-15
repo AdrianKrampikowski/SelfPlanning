@@ -20,7 +20,6 @@ export class AppComponent implements OnInit {
     const file = event.target.files[0];
     if (file) {
       this.csvService.exportCSV(file, 'csv');
-      // this.dataService.saveData(file);
     }
   }
 
@@ -32,6 +31,7 @@ export class AppComponent implements OnInit {
       data = { MAname: 'name1', shift: 'no shift' };
     }
     this.csvService.exportCSV(data, 'test');
+    this.dataService.saveData(data);
   }
 
   isclicked = false;
@@ -39,6 +39,7 @@ export class AppComponent implements OnInit {
   bookShift() {
     this.isclicked = !this.isclicked;
     console.log(this.isclicked);
+    this.dataService.getData();
   }
 
   ngOnInit(): void {}

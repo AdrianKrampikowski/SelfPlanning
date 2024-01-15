@@ -7,11 +7,11 @@ import { Observable } from 'rxjs';
 })
 export class DataService {
   constructor(private http: HttpClient) {}
+  apiUrl = 'http://127.0.0.1:4000/test';
 
-  apiUrl = '';
-
-  getData(): Observable<any[]> {
-    return this.http.get<any[]>(this.apiUrl);
+  getData() {
+    debugger;
+    return this.http.get(this.apiUrl);
   }
 
   saveData(data: any): Observable<any> {
