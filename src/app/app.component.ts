@@ -40,6 +40,7 @@ export class AppComponent implements OnInit {
     this.isclicked = !this.isclicked;
     console.log(this.isclicked);
     this.dataService.getData();
+    
   }
 
   ngOnInit(): void {}
