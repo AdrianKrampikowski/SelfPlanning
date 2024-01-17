@@ -7,7 +7,6 @@ export class CsvService {
   constructor() {}
 
   convertToCSV(data: any) {
-    debugger;
     const header = Object.keys(data).join(',');
     const rows = data.map((item: any) => Object.values(item).join(','));
     return `${header}\n${rows.join('\n')}`;

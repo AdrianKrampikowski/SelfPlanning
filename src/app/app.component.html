@@ -1,9 +1,16 @@
 <div class="main-container">
   <div class="ma-container">Name1</div>
   <div class="time-shift-container">
-    <div>08:00-16:30Uhr</div>
-    <div class="shift-container not-booked" *ngIf="!isclicked" (click)="bookShift()"></div>
-    <div class="shift-container booked" *ngIf="isclicked" (click)="bookShift()">X</div>
+    <div>
+      <div>08:00-08:30Uhr</div>
+      <div class="shift-container not-booked" *ngIf="!isclicked" (click)="bookShift()"></div>
+      <div class="shift-container booked" *ngIf="isclicked" (click)="bookShift()">X</div>
+    </div>
+    <div>
+      <div>08:00-08:30Uhr</div>
+      <div class="shift-container not-booked" *ngIf="!isclicked" (click)="bookShift()"></div>
+      <div class="shift-container booked" *ngIf="isclicked" (click)="bookShift()">X</div>
+    </div>
   </div>
 </div>
 

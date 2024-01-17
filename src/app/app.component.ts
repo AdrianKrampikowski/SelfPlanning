@@ -26,12 +26,14 @@ export class AppComponent implements OnInit {
   exportData() {
     let data;
     if (this.isclicked) {
-      data = { MAname: 'name1', shift: '08:00-16:30Uhr' };
+      data = { MAname: 'name1', shift: '08:00Uhr' };
     } else {
       data = { MAname: 'name1', shift: 'no shift' };
     }
     this.csvService.exportCSV(data, 'test');
-    this.dataService.saveData(data);
+    this.dataService.saveData(data).subscribe((testData: any) => {
+      console.log('testData');
+    });
   }
 
   isclicked = false;
@@ -39,8 +41,9 @@ export class AppComponent implements OnInit {
   bookShift() {
     this.isclicked = !this.isclicked;
     console.log(this.isclicked);
-    this.dataService.getData();
-  
+    this.dataService.getData().subscribe((data: any) => {
+      console.log('data', data);
+    });
   }
 
   ngOnInit(): void {}
