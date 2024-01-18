@@ -41,6 +41,7 @@ export class AppComponent implements OnInit {
   bookShift() {
     this.isclicked = !this.isclicked;
     console.log(this.isclicked);
+    
     this.dataService.getData().subscribe((data: any) => {
       console.log('data', data);
     });
